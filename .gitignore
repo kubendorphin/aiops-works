@@ -1,1 +1,3 @@
-week*/task*/.terraform/
+**/.terraform/*
+**/*.tfstate
+**/*.tfstate.*
