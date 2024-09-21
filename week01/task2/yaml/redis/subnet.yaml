@@ -1,0 +1,16 @@
+apiVersion: vpc.tencentcloud.crossplane.io/v1alpha1
+kind: Subnet
+metadata:
+  annotations:
+    meta.upbound.io/example-id: redis/v1alpha1/instance
+  labels:
+    testing.upbound.io/example-name: subnet
+  name: example-cvm-subnet
+spec:
+  forProvider:
+    availabilityZone: "ap-hongkong-2"
+    cidrBlock: "10.2.2.0/24"
+    name: "crossplane-redis-subnet"
+    vpcIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: vpc

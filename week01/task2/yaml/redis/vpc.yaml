@@ -1,0 +1,12 @@
+apiVersion: vpc.tencentcloud.crossplane.io/v1alpha1
+kind: VPC
+metadata:
+  name: example-cvm-vpc
+  labels:
+    testing.upbound.io/example-name: vpc
+  annotations:
+    meta.upbound.io/example-id: redis/v1alpha1/instance
+spec:
+  forProvider:
+    cidrBlock: "10.2.0.0/16"
+    name: "crossplane-redis-vpc"

@@ -1,0 +1,24 @@
+apiVersion: redis.tencentcloud.crossplane.io/v1alpha1
+kind: Instance
+metadata:
+  annotations:
+    meta.upbound.io/example-id: redis/v1alpha1/instance
+  labels:
+    testing.upbound.io/example-name: crossplane-redis
+  name: crossplane-redis
+spec:
+  forProvider:
+    availabilityZone: ap-hongkong-2
+    chargeType: "POSTPAID"
+    memSize: 512
+    name: terrform_demo
+    passwordSecretRef:
+      key: credentials
+      name: example-creds
+      namespace: default
+    port: 6379
+    redisReplicasNum: 1
+    redisShardNum: 1
+    subnetId: subnet-monl5yaz
+    typeId: 2
+    vpcId: vpc-63744320
