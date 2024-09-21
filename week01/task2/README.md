@@ -1226,8 +1226,8 @@ type: Opaque
 stringData:
   credentials: |
     {
-      "secret_id": "AKIDESm3DF861x0MvhP7xqqnigjeRLCBCALT",
-      "secret_key": "9KSdr5OgBpQwIc5hStHlCf3NlJuTAshT",
+      "secret_id": "<your secret_id>",
+      "secret_key": "<your secret_key>",
       "region": "ap-hongkong"
     }
 ```
