@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "chart.fullname" . }}-pre-install
+  annotations:
+    "helm.sh/hook": pre-install  #标记这是一个hook
+    "helm.sh/hook-weight": "1"  #控制hook执行顺序
+spec:
+  template:
+    spec:
+      containers:
+      - name: echo
+        image: busybox
+        command: ["echo", "This is a voting demo application"]
+      restartPolicy: Never
+  backoffLimit: 1
